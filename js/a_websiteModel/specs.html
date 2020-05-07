@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Life Easier</title>
+        <link rel="stylesheet" type="text/css" href="_css/style.css">
+        <link rel="stylesheet" href="_css/specs.css">
+    </head>
+
+    <script src="_javascript/functions.js"></script>
+
+    <body>
+        <div id="interface">
+            <header id="header"> 
+                <hgroup>
+                <h1>Life Easier</h1>
+                <h2>With the new day comes new strength and new thoughts.</h2>
+                </hgroup>
+
+                <img id="icone" src="_imagens/especificacoes.png">
+                
+                <nav id="menu">
+                    <h1>Main Menu</h1>
+                    <ul> <!--<ol type="1/a/A/i/I" start="3" >--> <!--<ul type="square/circle/disc">-->
+                        <li onmouseover="changePhoto('_imagens/home.png')" onmouseout="changePhoto('_imagens/especificacoes.png')"><a href="index.html">Home</a></li>
+                        <li onmouseover="changePhoto('_imagens/especificacoes.png')" onmouseout="changePhoto('_imagens/especificacoes.png')"><a href="specs.html">Specifications</a></li>
+                        <li onmouseover="changePhoto('_imagens/fotos.png')" onmouseout="changePhoto('_imagens/especificacoes.png')"><a href="photos.html">Photos</a></li>
+                        <li onmouseover="changePhoto('_imagens/multimidia.png')" onmouseout="changePhoto('_imagens/especificacoes.png')"><a href="multimidia.html">Multimedia</a></li>
+                        <!--
+                        <ul>
+                            <li>Music</li>
+                            <li>Videos</li>
+                        </ul>
+                        -->
+                        <li onmouseover="changePhoto('_imagens/contato.png')" onmouseout="changePhoto('_imagens/especificacoes.png')"><a href="talkToUs.html">Talk to us</a></li>
+                    </ul>
+                </nav>
+            </header> 
+
+            <section id="secondSection">
+                <article id="mainNews">
+                    <header id="articleHeader">
+                        <hgroup>
+                            <h3>Glass > Especificações</h3>
+                            <h1>Raio-X no Google Glass</h1>
+                            <h2>by Rodrigo Duarte</h2>
+                            <h3 class="rigth">Atualizado em 29/January/2020</h3>
+                        </hgroup>
+                    </header>
+                
+                    <p>Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.</p>
+
+                    <section id="content">
+                        <img src="_imagens/glass-esquema-marcado.jpg" usemap="#myMap">
+                        <map name="myMap">
+                            <area shape="rect" coords="179,202,270,260" href="gGlass.html#tela" target="window">
+                            <area shape="circle" coords="158,243,12" href="gGlass.html#camera" target="window">
+                            <area shape="circle" coords="73,52,12" href="gGlass.html#gadgets" target="window">
+                            <area shape="poly" coords="28, 143, 83, 216, 84, 249, 27, 169" href="gGlass.html#sensores" target="window">
+                        </map>
+                        <iframe src="gGlass.html" name="window" id="frame-spec" scrolling="no"></iframe>
+                    </section>
+                </article>
+            </section>
+
+            <footer id="footer">
+                <p>Copyright &copy; 2020 - by Rodrigo Duarte <br>
+                <a href="http://facebook.com" target="_blank">Facebook</a> | <a href="http://twitter.com" target="_blank">Twitter</a>
+                </p>
+            </footer>
+        </div>
+    </body>
+</html>

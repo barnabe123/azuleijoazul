@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM events</title>
+    <style>
+        div#area{
+            font: normal 20pt Arial;
+            background: green;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area" > <!--onclick="toClick()" onmouseenter="getIn()" onmouseout="getOut()"> -->
+        Interact
+    </div>
+
+    <script>
+        var a = document.getElementById('area')
+        a.addEventListener('click', toClick)    
+        a.addEventListener('mouseenter', getIn)
+        a.addEventListener('mouseout', getOut)    
+
+        function toClick(){ 
+            a.innerText = 'Clicked!'
+            a.style.background = 'red'
+        }
+
+        function getIn(){
+            a.innerText = 'Got in!'
+        }
+
+        function getOut(){
+            a.innerText = 'Got out!'
+            a.style.background = 'green'
+        }
+
+    </script>
+</body>
+</html>

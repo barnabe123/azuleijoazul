@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Life Easier</title>
+        <link rel="stylesheet" type="text/css" href="_css/style.css">
+        <link rel="stylesheet" href="_css/form.css">
+        <script src="_javascript/functions.js"></script>
+        <script>
+            function calc_total(){
+                var qtd = parseInt(document.getElementById('cQtd').value);
+                tot = qtd * 1500;
+                document.getElementById('cTot').value = tot;
+            }
+        </script>
+    </head>
+
+    <body>
+        <div id="interface">
+            <header id="header"> 
+                <hgroup>
+                <h1>Life Easier</h1>
+                <h2>With the new day comes new strength and new thoughts.</h2>
+                </hgroup>
+
+                <img id="icone" src="_imagens/contato.png">
+                
+                <nav id="menu">
+                    <h1>Main Menu</h1>
+                    <ul> <!--<ol type="1/a/A/i/I" start="3" >--> <!--<ul type="square/circle/disc">-->
+                        <li onmouseover="changePhoto('_imagens/home.png')" onmouseout="changePhoto('_imagens/contato.png')"><a href="index.html">Home</a></li>
+                        <li onmouseover="changePhoto('_imagens/especificacoes.png')" onmouseout="changePhoto('_imagens/contato.png')"><a href="specs.html">Specifications</a></li>
+                        <li onmouseover="changePhoto('_imagens/fotos.png')" onmouseout="changePhoto('_imagens/contato.png')"><a href="photos.html">Photos</a></li>
+                        <li onmouseover="changePhoto('_imagens/multimidia.png')" onmouseout="changePhoto('_imagens/contato.png')"><a href="multimidia.html">Multimedia</a></li>
+                        <!--
+                        <ul>
+                            <li>Music</li>
+                            <li>Videos</li>
+                        </ul>
+                        -->
+                        <li onmouseover="changePhoto('_imagens/contato.png')" onmouseout="changePhoto('_imagens/contato.png')"><a href="talkToUs.html">Talk to us</a></li>
+                    </ul>
+                </nav>
+            </header> 
+
+            <section id="secondSection">
+                <article id="mainNews">
+                    <header id="articleHeader">
+                        <hgroup>
+                            <h3>Fale Conosco > Contato</h3>
+                            <h1>Formulário de Contato</h1>
+                            <h2>by Rodrigo Duarte</h2>
+                            <h3 class="rigth">Atualizado em 29/January/2020</h3>
+                        </hgroup>
+                    </header>
+
+                    <form method="post" id="fContato" action="mailto:contato@cursoemvideo.com" oninput="calc_total();">
+                        <fieldset id="usuario">
+                            <legend>
+                                Identificação do Usuário
+                            </legend>
+                            <p><label for="cName">Nome:</label>  <input type="text" name="tName" id="cName" size="20" maxlength="30" placeholder="Full name"></p>
+                            <p><label for="cPassword">Senha:</label> <input type="password" name="tPassword" id="cPassword" size="8" maxlength="8" placeholder="8 digits"></p>
+                            <p><label for="cEmail">E-mail:</label> <input type="email" name="tEmail" id="cEmail" size="20" maxlength="40" placeholder="Email"></p>
+                            <fieldset id="sexo">
+                                <legend>
+                                Sexo:
+                                </legend>
+                                    <input type="radio" name="tSex" id="cMasc" checked><label for="cMasc">Masculino</label> <br>
+                                    <input type="radio" name="tSex" id="cFem"><label for="cFem">Feminino</label>
+                            </fieldset>
+                            <p><label for="cNasc">Data de Nascimento:</label> <input type="date" name="tNasc" id="cNasc"></p>
+                        </fieldset>
+
+                        <fieldset id="endereco">
+                            <legend>
+                                Endereço do Usuário
+                            </legend>
+                            <p><label for="cRua">Logradouro:</label> <input type="text" name="tRua" id="cRua" size="13" maxlength="80" placeholder="Rua, Av ..."></p>
+                            <p><label for="cNum">Número:</label> <input type="number" name="tNum" id="cNum" min="0" max="99999"></p>
+                            <p>
+                                <label for="cEst">Estado:</label> 
+                                    <select name="tEst" id="cEst">
+                                        <optgroup label="Região Sudeste">
+                                            <option value="RJ">Rio de Janeiro</option>
+                                            <option value="SP"selected>São Paulo</option>
+                                            <option value="MG">Minas Gerais</option>
+                                        </optgroup>
+                                        <optgroup label="Região Sul">
+                                            <option value="PR">Paraná</option>
+                                            <option value="SC">Santa Catarina</option>
+                                            <option value="RS">Rio Grande do Sul</option>
+                                        </optgroup>
+                                    </select>
+                            </p>
+                            <p><label for="cCid">Cidade:</label> <input type="text" name="tCid" id="cCid" maxlength="40" size="20" placeholder="Your city" list="city"></p>
+                            <datalist id="city">
+                                <option value="Rio de Janeiro"></option>
+                                <option value="Nova Iguaçu"></option>
+                                <option value="Niterói"></option>
+                                <option value="Belford"></option>
+                            </datalist>                            
+                        </fieldset>
+
+                        <fieldset id="mensagem">
+                            <legend>
+                                Mensagem do Usuário
+                            </legend>
+                            <p><label for="cUrg">Grau de Urgência:</label>
+                                Mín<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2">Máx
+                            </p>
+                            <p><label for="cMsg">Mensagem:</label>
+                                <textarea name="tMsg" id="cMsg" cols="35" rows="5" placeholder="Write here your message"></textarea>
+                            </p>
+                            
+                        </fieldset>
+
+                        <fieldset id="pedido">
+                            <legend>
+                                Quero um Google Glass
+                            </legend>
+                            <p>
+                                <input type="checkbox" name="tPed" id="cPed" checked>
+                                <label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label></p>
+                            <p><label for="cCor">Cor:</label>
+                                <input type="color" name="tCor" id="cCor" value="#0000FF">
+                            </p>
+                            <p><label for="cQtd">Quantidade:</label>
+                                <input type="number" name="tQtd" id="cQtd" min="0" max="5" value="0">
+                            </p>
+                            <p><label for="cTot">Preço Total: R$</label>
+                                <input type="text" name="tTot" id="cTot" placeholder="Total to pay" readonly>
+                            </p>
+                            
+                        </fieldset>
+
+
+                        <!--<input type="submit" value="Send">-->
+                        <input type="image" name="tEnviar" src="_imagens/botao-enviar.png">
+                    </form>
+
+
+                </article>
+            </section>
+
+            <footer id="footer">
+                <p>Copyright &copy; 2020 - by Rodrigo Duarte <br>
+                <a href="http://facebook.com" target="_blank">Facebook</a> | <a href="http://twitter.com" target="_blank">Twitter</a>
+                </p>
+            </footer>
+        </div>
+    </body>
+</html>

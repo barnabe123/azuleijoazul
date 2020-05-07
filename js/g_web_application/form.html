@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title>Travel A</title>
+
+        <link rel="stylesheet" type="text/css" href="style.css"> 
+
+        <script src="scripts.js"></script> 
+          
+    </head>
+
+    <body>
+        <div id="interface">
+            <header id="header"> 
+                <hgroup>
+                <h1>Travel A</h1>
+                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. .</h2>
+                <h2>est ullam iste ad perspiciatis, provident error veritatis .</h2>
+                <h2>adipisci quis voluptate nostrum voluptatibus eum minima aspernatur  .</h2>
+
+                </hgroup>
+
+                <img id="icon" src="contact.png">
+                
+                </nav>
+            </header> 
+
+            <section id="secondSection">
+                <article id="mainNews">
+                    <header id="articleHeader">
+                        <hgroup>
+                            <h1>Contact Form</h1>
+                        </hgroup>
+                    </header>
+
+                    <form method="post" id="fContact" action="connect.php" onsubmit="return validation();">
+                        <fieldset id="user">
+                            <legend>
+                                User Identification
+                            </legend>
+
+                            <p><label for="cName">Name:</label>  <input type="text" name="tName" required id="cName" size="20" maxlength="30" placeholder="Eduardo Tamaki"></p>
+                            <span id="username" class="text-danger font-weight-bold"> </span>
+
+
+                            <p><label for="cPhone">Phone:</label> <input type="phone" name="tPhone" required id="cPhone" size="20" maxlength="30" placeholder="5535999045196"></p>
+                            <span id="phonein" class="text-danger font-weight-bold"> </span>
+
+
+                            <p><label for="cOrigin">Origin:</label> <input type="origin" name="tOrigin" required id="cOrigin" size="20" maxlength="30" placeholder="Itajubá"></p>
+                            <span id="originva" class="text-danger font-weight-bold"> </span>
+
+
+                            <p><label for="cDestination">Destination:</label> <input type="destination" name="tDestination" required id="cDestination" size="17" maxlength="30" placeholder="Piranguinho"></p>
+                            <span id="destinationva" class="text-danger font-weight-bold"> </span>
+                
+                            <p><label for="cDateFrom">Date From:</label> <input type="date" name="tDateFrom" required id="cDateFrom" min="2020-03-22" max="2030-12-30"></p>
+                            
+
+
+                            <p><label for="cDateTo">Date To:</label> <input type="date" name="tDateTo" required id="cDateTo" min="2020-03-23" max="2030-12-31"></p>
+                            
+
+                            <p><label for="cNum">Travelers Number:</label> <input type="number" name="tNum" required id="cNum" min="0" max="40" placeholder="0" ></p>
+                            
+                        </fieldset>
+
+
+                        <input type="submit" name="submit" value="submit">
+                    </form>
+
+
+                </article>
+            </section>
+
+            <aside id="aside">
+                <h1>About Travel A</h1>
+
+                <h2>News</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste laudantium, magnam quidem nihil eum quo exercitationem aliquid repudiandae maiores voluptate quaerat soluta ducimus fugit, velit cupiditate eius optio culpa possimus..</p>
+
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At cum nam est quis accusamus, veritatis laboriosam suscipit dolore facere doloribus voluptas iste qui cumque esse perferendis ea voluptatem quibusdam vero?</p>
+
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At cum nam est quis accusamus, veritatis laboriosam sus</p>
+            </aside>
+
+            <footer id="footer">
+                <p>Copyright &copy; 2020 - by Rodrigo Duarte <br>
+                <a href="http://facebook.com" target="_blank">Facebook</a> | <a href="http://twitter.com" target="_blank">Twitter</a>
+                </p>
+
+                <p> Travel A | contact@travela.com | +55 (35) 3621 4551</p>
+            </footer>
+        </div>
+ 
+    </body>
+</html>
+
+
